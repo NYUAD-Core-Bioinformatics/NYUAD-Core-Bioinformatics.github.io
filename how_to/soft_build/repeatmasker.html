@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Repeatmasker &mdash; Core BioInformatics  NYU Abu Dhabi 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Workflows" href="../../workflows/index.html" />
+    <link rel="prev" title="Maker" href="maker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Core BioInformatics  NYU Abu Dhabi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">HOWTO’s</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-technical-documentation">Core technical Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-bioinformatics-documentation">Core BioInformatics Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#software-stack">Software Stack</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Software Build Documentation</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="anvio.html">Anvio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="maker.html">Maker</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Repeatmasker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resource/index.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servers/index.html">Bioinformatics Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upcoming_events/index.html">Upcoming Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_links/index.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Core BioInformatics  NYU Abu Dhabi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">HOWTO’s</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Software Build Documentation</a></li>
+      <li class="breadcrumb-item active">Repeatmasker</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="repeatmasker">
+<h1>Repeatmasker<a class="headerlink" href="#repeatmasker" title="Permalink to this headline"></a></h1>
+<p>RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences.
+This installation procedure is based on v4.1.5</p>
+<p>Reference:- <a class="reference external" href="https://www.repeatmasker.org/RepeatMasker/">https://www.repeatmasker.org/RepeatMasker/</a></p>
+<p>Download repeatmasker version 4.1.5 from this <a class="reference external" href="https://www.repeatmasker.org/RepeatMasker/RepeatMasker-4.1.5.tar.gz">link</a></p>
+<p>Copy the downloaded file to the install location and extract in jubail.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cp<span class="w"> </span>RepeatMasker-4.1.5.tar.gz<span class="w"> </span>/scratch/gencore/softwares/
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/gencore/softwares/
+$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>RepeatMasker-4.1.5.tar.gz
+$<span class="w"> </span>mv<span class="w"> </span>RepeatMasker<span class="w"> </span>RepeatMasker-4.1.5
+</pre></div>
+</div>
+<p>Then we would need to install the prerequisites for building this package. We can accomplish this by using the anaconda.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gencore/1
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniconda3/4.7.10
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-p<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>hmmer<span class="w"> </span>rmblast<span class="w"> </span>trf<span class="w"> </span>bioawk<span class="w"> </span>-y
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5
+</pre></div>
+</div>
+<p>Place the RepBase RepeatMasker Edition ( final version 10/26/2018 )  in the install directory and extract the contents.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cp<span class="w"> </span>/scratch/Reference_Genomes/Public/RepeatMasker/RepBaseRepeatMaskerEdition-20181026.tar.gz<span class="w"> </span>/scratch/gencore/softwares/RepeatMasker-4.1.5/
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/scratch/gencore/softwares/RepeatMasker-4.1.5/
+$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>RepBaseRepeatMaskerEdition-20181026.tar.gz
+</pre></div>
+</div>
+<p>Download the Dfam 3.7 Library from this <a class="reference external" href="https://www.dfam.org/releases/Dfam_3.7/families/Dfam.h5.gz">link</a> and extract the contents to the Libraries directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cp<span class="w"> </span>/scratch/Reference_Genomes/Public/RepeatMasker/Dfam.h5.gz<span class="w"> </span>/scratch/gencore/softwares/RepeatMasker-4.1.5/
+$<span class="w"> </span>gunzip<span class="w"> </span>Dfam.h5.gz
+$<span class="w"> </span>mv<span class="w"> </span>Dfam.h5<span class="w"> </span>Libraries/
+</pre></div>
+</div>
+<p>Run the Configure script as follows:-</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>perl<span class="w"> </span>./configure<span class="w"> </span>-libdir<span class="w"> </span>/scratch/gencore/software/RepeatMasker-4.1.5/Libraries<span class="w"> </span>-trf_prgm<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5/bin/trf
+-rmblast_dir<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5/bin/<span class="w"> </span>-hmmer_dir<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5/bin
+-abblast_dir<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5/bin<span class="w"> </span>-crossmatch_dir<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5/bin
+-default_search_engine<span class="w"> </span>rmblast
+</pre></div>
+</div>
+<p>Great, you may see below message once the setup is done.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Building<span class="w"> </span>FASTA<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>RepeatMasker.lib<span class="w"> </span>......................................................................
+Building<span class="w"> </span>RMBlast<span class="w"> </span>frozen<span class="w"> </span>libraries..
+The<span class="w"> </span>program<span class="w"> </span>is<span class="w"> </span>installed<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>the<span class="w"> </span>following<span class="w"> </span>repeat<span class="w"> </span>libraries:
+File:<span class="w"> </span>/scratch/gencore/software/RepeatMasker-4.1.5/Libraries/RepeatMaskerLib.h5
+FamDB<span class="w"> </span>Generator:<span class="w"> </span>famdb.py<span class="w"> </span>v0.4.2
+FamDB<span class="w"> </span>Format<span class="w"> </span>Version:<span class="w"> </span><span class="m">0</span>.5
+FamDB<span class="w"> </span>Creation<span class="w"> </span>Date:<span class="w"> </span><span class="m">2023</span>-01-08<span class="w"> </span><span class="m">10</span>:42:05.645898
+
+Database:<span class="w"> </span>Dfam<span class="w"> </span>withRBRM
+Version:<span class="w"> </span><span class="m">3</span>.7
+Date:<span class="w"> </span><span class="m">2023</span>-01-11
+</pre></div>
+</div>
+<p>To load the modules, follow below procedure.</p>
+<p>Launch a new session in jubail.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gencore/1
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniconda3/4.7.10
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s1">&#39;/scratch/gencore/software/RepeatMasker-4.1.5:/scratch/gencore/software/RepeatMasker-4.1.5/util&#39;</span>:<span class="nv">$PATH</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="maker.html" class="btn btn-neutral float-left" title="Maker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../workflows/index.html" class="btn btn-neutral float-right" title="Workflows" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Core Bioinformatics | NYU Abu Dhabi.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

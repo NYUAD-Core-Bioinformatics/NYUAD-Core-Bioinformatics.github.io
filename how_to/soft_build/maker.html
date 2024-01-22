@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maker &mdash; Core BioInformatics  NYU Abu Dhabi 1.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Repeatmasker" href="repeatmasker.html" />
+    <link rel="prev" title="Anvio" href="anvio.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Core BioInformatics  NYU Abu Dhabi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">HOWTO’s</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-technical-documentation">Core technical Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#core-bioinformatics-documentation">Core BioInformatics Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#software-stack">Software Stack</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Software Build Documentation</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="anvio.html">Anvio</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Maker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="repeatmasker.html">Repeatmasker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resource/index.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../servers/index.html">Bioinformatics Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../training/index.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../upcoming_events/index.html">Upcoming Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful_links/index.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Core BioInformatics  NYU Abu Dhabi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">HOWTO’s</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Software Build Documentation</a></li>
+      <li class="breadcrumb-item active">Maker</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="maker">
+<h1>Maker<a class="headerlink" href="#maker" title="Permalink to this headline"></a></h1>
+<p>MAKER is a portable and easily configurable genome annotation pipeline.
+Its purpose is to allow smaller eukaryotic and prokaryotic genome projects to independently annotate their genomes and to create genome databases.</p>
+<p>This is based on Maker version 3.01.04
+Reference:- <a class="reference external" href="https://www.yandell-lab.org/software/maker.html">https://www.yandell-lab.org/software/maker.html</a></p>
+<p>Prerequisites</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>blast<span class="w"> </span>-<span class="w"> </span><span class="m">2</span>.13.0
+snap<span class="w"> </span>-<span class="w"> </span>2013_11_29
+exonerate<span class="w"> </span>-<span class="w"> </span><span class="m">2</span>.4.0
+genblasta<span class="w"> </span>-<span class="w"> </span><span class="m">1</span>.0.4
+RepeatMasker<span class="w"> </span>-<span class="w"> </span><span class="m">4</span>.1.2.p1
+snoscan<span class="w"> </span>-<span class="w"> </span><span class="m">1</span>.0
+trnascan-se<span class="w"> </span>-<span class="w"> </span><span class="m">2</span>.0.9
+interproscan<span class="w"> </span>-<span class="w"> </span><span class="m">5</span>.55_88.0
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gencore
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniconda3/4.7.10
+$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>-p<span class="w"> </span>/scratch/gencore/conda3/envs/maker3<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span><span class="nv">perl</span><span class="o">=</span><span class="m">5</span>.26.2
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>/scratch/gencore/conda3/envs/maker3
+$<span class="w"> </span>wget<span class="w"> </span>http://weatherby.genetics.utah.edu/maker_downloads/D2BE/7CA3/067C/DC399810E1834576C76C4203FC4A/maker-3.01.04.tgz
+</pre></div>
+</div>
+<p>Extract the file and switch to build directory which is ../maker/src/ and execute “perl Build.PL” to check the list of dependencies.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>maker-3.01.04.tgz
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>maker/src/
+$<span class="w"> </span>perl<span class="w"> </span>Build.PL
+</pre></div>
+</div>
+<p>Below commands solves perl dependencies</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w">   </span>perl-io-all<span class="w"> </span>perl-inline-c
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>perl-forks<span class="w"> </span>perl-want<span class="w"> </span>perl-bit-vector<span class="w"> </span>perl-bit-vector<span class="w"> </span>perl-dbd-sqlite<span class="w"> </span>perl-perl-unsafe-signals<span class="w"> </span>perl-dbd-pg
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w">   </span>perl-bioperl-core
+</pre></div>
+</div>
+<p>Below commands solves external softwares like blast, snap, exonerate etc..</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>snap<span class="w"> </span>exonerate<span class="w"> </span>blast
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>snoscan<span class="w"> </span>trnascan-se<span class="w"> </span>interproscan
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>repeatmasker
+</pre></div>
+</div>
+<p>Note:- if conda for repeatmasker fails, try below</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./Build<span class="w"> </span>installexes
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>genblasta
+$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>bioconda<span class="w"> </span>blast-legacy
+</pre></div>
+</div>
+<p>Preparing the environment, you may see below message.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>perl<span class="w"> </span>Build.PL
+<span class="o">==============================================================================</span>
+STATUS<span class="w"> </span>MAKER<span class="w"> </span>v2.31.11
+<span class="o">==============================================================================</span>
+PERL<span class="w"> </span>Dependencies:<span class="w">  </span>VERIFIED
+External<span class="w"> </span>Programs:<span class="w">  </span>VERIFIED
+External<span class="w"> </span>C<span class="w"> </span>Libraries:<span class="w">       </span>VERIFIED
+MPI<span class="w"> </span>SUPPORT:<span class="w">                </span>DISABLED
+MWAS<span class="w"> </span>Web<span class="w"> </span>Interface:<span class="w"> </span>DISABLED
+MAKER<span class="w"> </span>PACKAGE:<span class="w">              </span>CONFIGURATION<span class="w"> </span>OK
+</pre></div>
+</div>
+<p>To build the installation proceed below</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./Build<span class="w"> </span>install
+Building<span class="w"> </span>MAKER
+Installing<span class="w"> </span>MAKER...
+Building<span class="w"> </span>MAKER
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../perl/lib/MAKER/ConfigData.pm
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../perl/lib/Parallel/Application/MPI.pm
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../perl/man/MAKER::ConfigData.3
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/map_data_ids
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/maker_map_ids
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/fasta_tool
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/iprscan2gff3
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/genemark_gtf2gff3
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/maker_functional_gff
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/chado2gff3
+Installing<span class="w"> </span>/scratch/gencore/software/maker2/src/../bin/tophat2gff3
+Instruction<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>maker2<span class="w"> </span>as<span class="w"> </span>normal<span class="w"> </span><span class="nv">user</span>
+<span class="o">===</span>
+</pre></div>
+</div>
+<p>To load the maker package.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w">  </span>module<span class="w"> </span>load<span class="w"> </span>gencore
+$<span class="w">  </span>module<span class="w"> </span>load<span class="w"> </span>Miniconda3/4.7.10
+$<span class="w">  </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>/scratch/gencore/conda3/envs/maker3
+$<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/scratch/gencore/.eb/2.0/software/augustus/3.4.0/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+$<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/scratch/gencore/software/gmes_linux_64:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+$<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/scratch/gencore/software/ab-blast:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+$<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/scratch/gencore/software/genemark_prokaryotic:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+$<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/scratch/gencore/software/maker3/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+$<span class="w">  </span>maker<span class="w"> </span>-h
+</pre></div>
+</div>
+<p>Database location for Maker</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>/scratch/Reference_Genomes/Public/maker2_datasets/
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="anvio.html" class="btn btn-neutral float-left" title="Anvio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="repeatmasker.html" class="btn btn-neutral float-right" title="Repeatmasker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Core Bioinformatics | NYU Abu Dhabi.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HPC Bioinfomatics Software Stack &mdash; Core BioInformatics  NYU Abu Dhabi 1.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Software Build Documentation" href="soft_build/index.html" />
+    <link rel="prev" title="Interactive Apps in Jubail Web GUI" href="interactive_apps.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Core BioInformatics  NYU Abu Dhabi
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">HOWTO’s</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#core-technical-documentation">Core technical Documentation</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ssh.html">SSH key login to Jubail HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sftp.html">Transfer files using  CGSB SFTP service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="miso.html">Introduction to Lims - Miso</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dearchive.html">Dearchival of Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rstudio.html">R-Studio loading libraries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive_apps.html">Interactive Apps in Jubail Web GUI</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">HPC Bioinfomatics Software Stack</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-we-add-packages-in-jubail">How we add packages in jubail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-package-using-conda">Loading package using conda</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-package-using-source-activate-package-path">Loading package using “source activate &lt;package-path&gt;”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#loading-package-from-sources">Loading package from sources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#to-request-a-package">To request a package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#core-bioinformatics-documentation">Core BioInformatics Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#software-stack">Software Stack</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../workflows/index.html">Workflows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resource/index.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servers/index.html">Bioinformatics Servers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../training/index.html">Training</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../upcoming_events/index.html">Upcoming Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../useful_links/index.html">Useful Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">About</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Core BioInformatics  NYU Abu Dhabi</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">HOWTO’s</a></li>
+      <li class="breadcrumb-item active">HPC Bioinfomatics Software Stack</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hpc-bioinfomatics-software-stack">
+<h1>HPC Bioinfomatics Software Stack<a class="headerlink" href="#hpc-bioinfomatics-software-stack" title="Permalink to this headline"></a></h1>
+<section id="how-we-add-packages-in-jubail">
+<h2>How we add packages in jubail<a class="headerlink" href="#how-we-add-packages-in-jubail" title="Permalink to this headline"></a></h2>
+<p>We added packages in below methods.</p>
+<ul class="simple">
+<li><p>Installed via easybuild ( eg:- module load samtools/1.9 )</p></li>
+<li><p>Installed via conda environment ( eg:- source activate /scratch/gencore/conda3/envs/repeatmasker4.1.5 )</p></li>
+<li><p>Installed via compiling from source ( eg:- Using the tar.gz of the package )</p></li>
+<li><p>Installed via singularity in jubail ( this is still experimental )</p></li>
+<li><p>Installed via Docker on our annotation server.</p></li>
+</ul>
+</section>
+<section id="loading-package-using-conda">
+<h2>Loading package using conda<a class="headerlink" href="#loading-package-using-conda" title="Permalink to this headline"></a></h2>
+<p>This section explains how to load modules under gencore/2.</p>
+<p>To load gencore2 modules</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>all
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gencore/2
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt>Specify the first two letter of the software, and hit tab twice and you may able to see the options of software.</dt><dd><p>In the below example, I searched for samtools package, I entered first two letter and hit tab button twice</p>
+</dd>
+</dl>
+</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>sa
+<span class="w">  </span>salmon/<span class="w">    </span>samtools/<span class="w">  </span>savage/
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Good, now I can see there is a module for samtools under gencore/2. If you find the package and then to check if you require any specific version of samtools,
+again issue tab button twice, you are able to see the versions.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>samtools/
+<span class="w">  </span>samtools/1.3.1<span class="w">  </span>samtools/1.9
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Great, now I can choose samtools module with version 1.3.1</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>samtools/1.3.1
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>To check the loaded modules in your current shell</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+<section id="loading-package-using-source-activate-package-path">
+<h2>Loading package using “source activate &lt;package-path&gt;”<a class="headerlink" href="#loading-package-using-source-activate-package-path" title="Permalink to this headline"></a></h2>
+<p>This section explains how to load packages under conda.
+In the below example, using Miniconda module, you are enabling the repeatmasker 4.1.5 verison as a conda environment on your path.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gencore/1
+$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>Miniconda3/4.7.10
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>activate<span class="w"> </span>/scratch/gencore/conda3/envs/repeatmasker4.1.5
+</pre></div>
+</div>
+</section>
+<section id="loading-package-from-sources">
+<h2>Loading package from sources<a class="headerlink" href="#loading-package-from-sources" title="Permalink to this headline"></a></h2>
+<p>This section explains how to load packages source path location.
+Compiled packages are available under below path.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>/scratch/gencore/software/
+</pre></div>
+</div>
+<p>To load the specified package path, for eg:- maker version 2, you may issue below command in your command line.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s1">&#39;/scratch/gencore/software/maker2&#39;</span>:<span class="nv">$PATH</span>
+</pre></div>
+</div>
+</section>
+<section id="to-request-a-package">
+<h2>To request a package<a class="headerlink" href="#to-request-a-package" title="Permalink to this headline"></a></h2>
+<p>If you unable to find a package, you may proceed with sending an email to <a class="reference external" href="mailto:nyuad&#46;cgsb&#46;cb&#37;&#52;&#48;nyu&#46;edu">nyuad<span>&#46;</span>cgsb<span>&#46;</span>cb<span>&#64;</span>nyu<span>&#46;</span>edu</a> by mentioning below pointers.</p>
+<ul class="simple">
+<li><p>Software version</p></li>
+<li><p>Github or Software download link</p></li>
+<li><p>If required databases to be downloaded, specify the exact link, names etc…</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="interactive_apps.html" class="btn btn-neutral float-left" title="Interactive Apps in Jubail Web GUI" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="soft_build/index.html" class="btn btn-neutral float-right" title="Software Build Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Core Bioinformatics | NYU Abu Dhabi.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

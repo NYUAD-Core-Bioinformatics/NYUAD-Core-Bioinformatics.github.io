@@ -18,6 +18,9 @@ Core technical Documentation
    /how_to/interactive_apps.rst  
    /how_to/hpc_bioinformatics.rst
 
+DADA2 for 16S data analysis
+
+
 Core BioInformatics Documentation
 ----------------------------------
 

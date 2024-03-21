@@ -1,7 +1,7 @@
 Transfer files using  CGSB SFTP service
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This procedure explains how to transfer files to external collaberators.
+This procedure explains how to transfer files between NYUAD to external collaberators.
 
 There are two ways you can transfer files to CGSB file transfer server
 
@@ -9,21 +9,21 @@ To request an account, please fill out this `form <https://docs.google.com/forms
 
     
 
-**1) Using Command Line**
+**1) Using Command Line** ( Internal )
    
 
-Launch terminal app from your laptop
-If data resides in jubail, you would need to login to jubail and follow below instruction. 
+Launch terminal app from your Linux/Mac laptop.
+
 
 .. code:: bash
 
-    $ rsync -av --progress -e 'ssh -p 4410' <local-path> <net-id>@cgsb-sftp.abudhabi.nyu.edu:<destination-path>
+    $ rsync -av --progress -e 'ssh -p 4410'  <net-id>@cgsb-sftp.abudhabi.nyu.edu:<destination-path> <local-path>
 
-Below is an example, here i would like to share a directory named **datadir** from jubail to SFTP site on path **/data/jr5241/upload** 
+Below is an example, here i would like to share a directory named **datadir** from jubail to SFTP site on path **/data/<username>/upload** 
 
 .. code:: bash
 
-    $ rsync -av --progress -e 'ssh -p 4410' /scratch/jr5241/datadir jr5241@cgsb-sftp.abudhabi.nyu.edu:/data/jr5241/upload/
+    $ rsync -av --progress -e 'ssh -p 4410' <username>@cgsb-sftp.abudhabi.nyu.edu:/data/<username>/upload/ <localpath-on-your-laptop>
 
 
 
@@ -34,23 +34,17 @@ Below is an example, here i would like to share a directory named **datadir** fr
 If the data resides in Jubail, then you need to login to `Jubail Web Interface <https://ood.hpc.abudhabi.nyu.edu>`__  . Then launch **Filezilla** GUI application from the **Interactive Apps** menu.     
 If you have any doubts navigating to Jubail Web Interface, kindly refer to `NYUAD CRC page <https://crc-docs.abudhabi.nyu.edu/hpc/ood/index.html>`__ 
 
-If the data resides locally then you need to download `Filezilla <https://filezilla-project.org/download.php?type=client>`__ on your laptop. 
+To retrieve the data locally then you need to download `Filezilla <https://filezilla-project.org/download.php?type=client>`__ software on your laptop. 
 
-Below information will share with you once you request for an sftp account
+Below information will share with you once you request for an sftp account.
 
 .. code-block:: none
 
     Host: sftp://cgsb-sftp.abudhabi.nyu.edu
-    User: <net-id>
+    User: <username>
     Pass: <Specify the password shared with you>
     Port: 4410
 
-
-
-.. figure::  /how_to/img/filezilla_login.png
-   :align: center
-
-   *Figure: Specifying Credentials*
  
 
 .. figure::  /how_to/img/filezilla_copy.png

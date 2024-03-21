@@ -97,40 +97,33 @@
              
   <section id="transfer-files-using-cgsb-sftp-service">
 <h1>Transfer files using  CGSB SFTP service<a class="headerlink" href="#transfer-files-using-cgsb-sftp-service" title="Permalink to this headline"></a></h1>
-<p>This procedure explains how to transfer files to external collaberators.</p>
+<p>This procedure explains how to transfer files between NYUAD to external collaberators.</p>
 <p>There are two ways you can transfer files to CGSB file transfer server</p>
 <p>To request an account, please fill out this <a class="reference external" href="https://docs.google.com/forms/d/e/1FAIpQLSeQ9A2yF2s0iFzVpCYr_aYneD-l4x_Y5iEMiGPxNIhaO9eOAA/viewform">form</a></p>
-<p><strong>1) Using Command Line</strong></p>
-<p>Launch terminal app from your laptop
-If data resides in jubail, you would need to login to jubail and follow below instruction.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;ssh -p 4410&#39;</span><span class="w"> </span>&lt;local-path&gt;<span class="w"> </span>&lt;net-id&gt;@cgsb-sftp.abudhabi.nyu.edu:&lt;destination-path&gt;
+<p><strong>1) Using Command Line</strong> ( Internal )</p>
+<p>Launch terminal app from your Linux/Mac laptop.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;ssh -p 4410&#39;</span><span class="w">  </span>&lt;net-id&gt;@cgsb-sftp.abudhabi.nyu.edu:&lt;destination-path&gt;<span class="w"> </span>&lt;local-path&gt;
 </pre></div>
 </div>
-<p>Below is an example, here i would like to share a directory named <strong>datadir</strong> from jubail to SFTP site on path <strong>/data/jr5241/upload</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;ssh -p 4410&#39;</span><span class="w"> </span>/scratch/jr5241/datadir<span class="w"> </span>jr5241@cgsb-sftp.abudhabi.nyu.edu:/data/jr5241/upload/
+<p>Below is an example, here i would like to share a directory named <strong>datadir</strong> from jubail to SFTP site on path <strong>/data/&lt;username&gt;/upload</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>rsync<span class="w"> </span>-av<span class="w"> </span>--progress<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;ssh -p 4410&#39;</span><span class="w"> </span>&lt;username&gt;@cgsb-sftp.abudhabi.nyu.edu:/data/&lt;username&gt;/upload/<span class="w"> </span>&lt;localpath-on-your-laptop&gt;
 </pre></div>
 </div>
 <p><strong>2) Using Filezilla</strong></p>
 <p>If the data resides in Jubail, then you need to login to <a class="reference external" href="https://ood.hpc.abudhabi.nyu.edu">Jubail Web Interface</a>  . Then launch <strong>Filezilla</strong> GUI application from the <strong>Interactive Apps</strong> menu.
 If you have any doubts navigating to Jubail Web Interface, kindly refer to <a class="reference external" href="https://crc-docs.abudhabi.nyu.edu/hpc/ood/index.html">NYUAD CRC page</a></p>
-<p>If the data resides locally then you need to download <a class="reference external" href="https://filezilla-project.org/download.php?type=client">Filezilla</a> on your laptop.</p>
-<p>Below information will share with you once you request for an sftp account</p>
+<p>To retrieve the data locally then you need to download <a class="reference external" href="https://filezilla-project.org/download.php?type=client">Filezilla</a> software on your laptop.</p>
+<p>Below information will share with you once you request for an sftp account.</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Host: sftp://cgsb-sftp.abudhabi.nyu.edu
-User: &lt;net-id&gt;
+User: &lt;username&gt;
 Pass: &lt;Specify the password shared with you&gt;
 Port: 4410
 </pre></div>
 </div>
 <figure class="align-center" id="id1">
-<img alt="../_images/filezilla_login.png" src="../_images/filezilla_login.png" />
-<figcaption>
-<p><span class="caption-text"><em>Figure: Specifying Credentials</em></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
-</figcaption>
-</figure>
-<figure class="align-center" id="id2">
 <img alt="../_images/filezilla_copy.png" src="../_images/filezilla_copy.png" />
 <figcaption>
-<p><span class="caption-text"><em>Figure: Transfer window between source and destination</em></span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><em>Figure: Transfer window between source and destination</em></span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>If you are unable to transfer data to the SFTP site, please write us <a class="reference external" href="mailto:nyuad&#46;cgsb&#46;cb&#37;&#52;&#48;nyu&#46;edu">nyuad<span>&#46;</span>cgsb<span>&#46;</span>cb<span>&#64;</span>nyu<span>&#46;</span>edu</a></p>

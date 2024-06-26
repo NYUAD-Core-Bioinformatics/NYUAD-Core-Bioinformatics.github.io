@@ -8,11 +8,11 @@ JIRA
 
 This server hosts jira software which is used for issue tracking and project management. 
 
-+-----------------+-----+-------+--------+-------------+---------------------------------------------+
-|Server Name      |CPU  |Memory |Storage |IP Address   |URL                                          |
-+=================+=====+=======+========+=============+=============================================+
-|ADUAE-169-LAP    |16   |32GB   |100G    |10.230.9.146 |https://cbi.abudhabi.nyu.edu/jira/           |
-+-----------------+-----+-------+--------+-------------+---------------------------------------------+
++------------------------------------+-----+-------+--------+
+|URL                                 |CPU  |Memory |Storage |                                      
++====================================+=====+=======+========+
+|https://cbi.abudhabi.nyu.edu/jira/  |16   |32GB   |100GB   |
++------------------------------------+-----+-------+--------+
 
 
 
@@ -21,11 +21,11 @@ Airflow
 
 Airflow(Guru) is an open-source workflow management platform for developing, scheduling and monitoring batch oriented workflows.
 
-+-----------------+-----+-------+--------+-------------+--------------------------------------------+
-|Server Name      |CPU  |Memory |Storage |IP Address   |URL                                         |
-+=================+=====+=======+========+=============+============================================+
-|DCLAP-P1341-CGSB |16   |32GB   |150G    |10.230.14.38 |https://guru.abudhabi.nyu.edu               |
-+-----------------+-----+-------+--------+-------------+--------------------------------------------+
++------------------------------------+-----+-------+--------+
+|URL                                 |CPU  |Memory |Storage |                                      
++====================================+=====+=======+========+
+|https://guru.abudhabi.nyu.edu       |16   |32GB   |58TB    |
++------------------------------------+-----+-------+--------+
 
 
 Miso
@@ -33,11 +33,13 @@ Miso
 
 Miso is an open-source Lab Information Management System for tracking next-generation sequencing experiments. 
 
-+-----------------+-----+-------+--------+-------------+--------------------------------------------+
-|Server Name      |CPU  |Memory |Storage |IP Address   |URL                                         |
-+=================+=====+=======+========+=============+============================================+
-|DCLAP-P1334-CGSB |16   |32GB   |150G    |10.230.14.39 |https://miso.abudhabi.nyu.edu               |
-+-----------------+-----+-------+--------+-------------+--------------------------------------------+
++------------------------------------+-----+-------+--------+
+|URL                                 |CPU  |Memory |Storage |                                      
++====================================+=====+=======+========+
+|https://miso.abudhabi.nyu.edu       |16   |32GB   |100GB   |
++------------------------------------+-----+-------+--------+
+
+
 
 To request an account, please fill out this `form <https://docs.google.com/forms/d/e/1FAIpQLSfx3CxLrFb7FRh0hZlUfy2V-n85u1OTxSKngCoCzqyEs9psNQ/viewform>`__
 
@@ -48,11 +50,11 @@ Annotation Blade
 
 This server hosts to run some specific workflows which is not compatable with the Jubail HPC environment.
 
-+-----------------+-----+-------+--------+-------------+---------------------------------------------+
-|Server Name      |CPU  |Memory |Storage |IP Address   |URL                                          |
-+=================+=====+=======+========+=============+=============================================+
-|DCLAP-P1327-CGSB |16   |32GB   |16TB    |10.230.14.33 |annotation.abudhabi.nyu.edu                  |
-+-----------------+-----+-------+--------+-------------+---------------------------------------------+
++------------------------------------+-----+-------+--------+
+|URL                                 |CPU  |Memory |Storage |                                      
++====================================+=====+=======+========+
+|annotation.abudhabi.nyu.edu         |16   |32GB   |16TB    |
++------------------------------------+-----+-------+--------+
 
 
 To request an account, please fill out this `form <https://docs.google.com/forms/d/e/1FAIpQLSeOPFhCKNVtphu1oF3VW6YVChp17PrXOtDtdRqOXEXHt3K3CQ/viewform>`__
@@ -61,19 +63,20 @@ To request an account, please fill out this `form <https://docs.google.com/forms
 CGSB SFTP File Share
 --------------------
 
-This server hosts the file transfer service to share and receive files with external collaberators 
+This server hosts the file transfer service to share and receive files with external collaberators.
 
-+-----------------+-----+-------+--------+---------------+---------------------------------------------+
-|Server Name      |CPU  |Memory |Storage |IP Address     |URL                                          |
-+=================+=====+=======+========+===============+=============================================+
-|EELAP-V1349-FTP  |6    |8GB    |10TB    |10.230.240.240 |cgsb-sftp.abudhabi.nyu.edu                   |
-+-----------------+-----+-------+--------+---------------+---------------------------------------------+
++------------------------------------+-----+-------+--------+
+|URL                                 |CPU  |Memory |Storage |                                      
++====================================+=====+=======+========+
+|cgsb-sftp.abudhabi.nyu.edu          |16   |8GB    |10TB    |
++------------------------------------+-----+-------+--------+
+
 
 To request an account, please fill out this `form <https://docs.google.com/forms/d/e/1FAIpQLSeQ9A2yF2s0iFzVpCYr_aYneD-l4x_Y5iEMiGPxNIhaO9eOAA/viewform>`__
 
-.. Please refer to this :ref:`document <cgsb_sftp>` for usage instructions
+.. Please refer to this :ref:`document <cgsb_sftp>` for usage instructions.
 
 .. warning:: 
      * This service is not intented for storing files. 
-     * Credentials will be shared via `BOX <https://nyu.account.box.com/login>`__
+     * Credentials will be shared via `BOX <https://nyu.account.box.com/login>`__.
     

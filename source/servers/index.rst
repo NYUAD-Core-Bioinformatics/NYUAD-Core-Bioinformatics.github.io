@@ -51,7 +51,7 @@ Annotation Blade
 This server hosts to run some specific workflows which is not compatable with the Jubail HPC environment.
 
 +------------------------------------+-----+-------+--------+
-|URL                                 |CPU  |Memory |Storage |                                      
+|Host                                 |CPU  |Memory |Storage |                                      
 +====================================+=====+=======+========+
 |annotation.abudhabi.nyu.edu         |16   |32GB   |16TB    |
 +------------------------------------+-----+-------+--------+
@@ -66,7 +66,7 @@ CGSB SFTP File Share
 This server hosts the file transfer service to share and receive files with external collaberators.
 
 +------------------------------------+-----+-------+--------+
-|URL                                 |CPU  |Memory |Storage |                                      
+|Host                                 |CPU  |Memory |Storage |                                      
 +====================================+=====+=======+========+
 |cgsb-sftp.abudhabi.nyu.edu          |16   |8GB    |10TB    |
 +------------------------------------+-----+-------+--------+

@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Core BioInformatics  NYU Abu Dhabi'
-copyright = '2024, Core Bioinformatics | NYU Abu Dhabi'
+copyright = '2025, Core Bioinformatics | NYU Abu Dhabi'
 author = 'Core Bioinformatics NYU Abu Dhabi'
 
 # The full version, including alpha/beta/rc tags

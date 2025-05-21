@@ -131,9 +131,10 @@
 </div>
 <p>To check the state of dearchive directory.
 If you need to check the status of file, remove the “-d” flag</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dmfls<span class="w"> </span>-d<span class="w"> </span>&lt;/archive/gencore/XXXX/XXXX/XXX&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dmfls<span class="w"> </span>-d<span class="w"> </span>&lt;/archive/gencore/XXXX/XXXX/XXX&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-c<span class="w"> </span>released
 </pre></div>
 </div>
+<p>Note:- if the above value is “0”, then the de-archive is completed.</p>
 <section id="de-archive-cgsb-shared-path">
 <h2>De-archive CGSB shared path<a class="headerlink" href="#de-archive-cgsb-shared-path" title="Permalink to this headline"></a></h2>
 <p>This shared space is only visible to the end user and cgsb core team.

@@ -41,7 +41,9 @@ If you need to check the status of file, remove the "-d" flag
 
 .. code:: bash 
 
-    $ dmfls -d </archive/gencore/XXXX/XXXX/XXX>
+    $ dmfls -d </archive/gencore/XXXX/XXXX/XXX> | grep -c released 
+
+Note:- if the above value is "0", then the de-archive is completed. 
 
 
 De-archive CGSB shared path

@@ -57,6 +57,17 @@ html_theme = 'sphinx_rtd_theme'
 #    'style_external_links': False,
 #}
 
+html_context = {
+    "display_github": True,
+    "github_user": "learn-gencore",
+    "github_repo": "learn-gencore",
+    "github_version": "main",
+    "conf_py_path": "/source/",
+}
+
+html_theme_options = {
+    "analytics_id": "G-6CLN126VRW",
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
